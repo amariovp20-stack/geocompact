@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">GeoCompact Pro</title>
+  <desc id="desc">Emblema geotecnico con molde de compactacion, estratos de suelo y curva Proctor.</desc>
+  <defs>
+    <linearGradient id="shield" x1="17" y1="14" x2="111" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset=".48" stop-color="#dbe4ea"/>
+      <stop offset="1" stop-color="#d9efe9"/>
+    </linearGradient>
+    <linearGradient id="soil" x1="32" y1="76" x2="96" y2="99" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1e3a5f"/>
+      <stop offset=".55" stop-color="#315f7d"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="curve" x1="27" y1="30" x2="99" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1e3a5f"/>
+      <stop offset=".55" stop-color="#315f7d"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <path d="M64 8 111 25v36c0 29-18 49-47 59-29-10-47-30-47-59V25L64 8Z" fill="url(#shield)" stroke="#ffffff" stroke-width="5"/>
+  <path d="M38 70h52a9 9 0 0 1 9 9v18H29V79a9 9 0 0 1 9-9Z" fill="#e5eaef" stroke="#1e3a5f" stroke-width="4"/>
+  <path d="M34 83c9-5 18 5 29 0s20-5 31 0v8c-11-5-20-5-31 0s-20-5-29 0v-8Z" fill="#9aa8b4"/>
+  <path d="M34 93c9-5 18 5 29 0s20-5 31 0v9H34v-9Z" fill="url(#soil)"/>
+  <path d="M28 61c11-31 58-31 72 0" fill="none" stroke="url(#curve)" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="29" cy="61" r="5" fill="#1e3a5f" stroke="#fff" stroke-width="2"/>
+  <circle cx="64" cy="39" r="5" fill="#0f766e" stroke="#fff" stroke-width="2"/>
+  <circle cx="100" cy="61" r="5" fill="#1e3a5f" stroke="#fff" stroke-width="2"/>
+  <path d="M49 24h30M55 111h18" stroke="#1e3a5f" stroke-width="5" stroke-linecap="round"/>
+  <text x="64" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#1e3a5f">GCP</text>
+</svg>
