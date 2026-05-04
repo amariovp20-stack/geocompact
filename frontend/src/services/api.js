@@ -174,6 +174,9 @@ function calcularLocal(data){
 }
 
 export async function calcularProctor(body){
+  if(import.meta.env.PROD && !import.meta.env.VITE_API_URL){
+    return calcularLocal(body);
+  }
   try{
     const res = await fetch(`${API_URL}/calcular-proctor`, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
     if(!res.ok) throw new Error('API no disponible');
