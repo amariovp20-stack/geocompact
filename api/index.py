@@ -28,6 +28,16 @@ def health():
     return {"message": "GeoCompact Pro API v5 funcionando"}
 
 
+@app.get("/api/health")
+def health_api():
+    return health()
+
+
 @app.post("/calcular-proctor")
 def calcular(data: ProctorData):
     return calcular_proctor(data)
+
+
+@app.post("/api/calcular-proctor")
+def calcular_api(data: ProctorData):
+    return calcular(data)
