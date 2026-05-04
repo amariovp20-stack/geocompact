@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: geocompact-pro-v5
-    runtime: python
-    plan: free
-    buildCommand: cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
-    healthCheckPath: /health
