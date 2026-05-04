@@ -5,6 +5,8 @@ body{margin:0;background:var(--fondo);font-family:Inter,Arial,sans-serif;color:v
 .hero{background:linear-gradient(135deg,#172b45,#315f7d 58%,#0f766e);color:white;padding:26px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;box-shadow:0 10px 24px rgba(23,43,69,.18)}
 .brand{display:flex;align-items:center;gap:16px}
 .brand img{width:72px;height:72px;flex:0 0 72px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.22))}
+.heroActions{display:flex;align-items:center;gap:10px}
+.sampleButton{margin-top:0;background:#f8fafc;color:#1e3a5f;border:1px solid rgba(255,255,255,.5)}
 .hero h1{margin:0;font-size:34px}
 .hero p{margin:6px 0 0}
 .badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.36);padding:10px 14px;border-radius:8px}
@@ -59,4 +61,4 @@ button:hover{filter:brightness(.96)}
 .appFooter,.printRights{text-align:center;color:#475569;font-size:12px;font-weight:700;margin:22px 0 6px}
 .printRights{display:none}
 @media print{.appFooter,.printRights{display:block;color:#111827;border-top:1px solid #cbd5e1;padding-top:8px}.hero,.card{box-shadow:none}button,.chartControls{display:none!important}}
-@media(max-width:800px){.grid2,.grid3,.grid4,.grid5,.kpis,.chartControls{grid-template-columns:1fr}.humidityBox{display:block}.humidityBox button{width:100%;margin-top:12px}.hero{display:block}.brand{align-items:flex-start}.brand img{width:58px;height:58px;flex-basis:58px}.page{padding:12px}}
+@media(max-width:800px){.grid2,.grid3,.grid4,.grid5,.kpis,.chartControls{grid-template-columns:1fr}.humidityBox{display:block}.humidityBox button{width:100%;margin-top:12px}.hero{display:block}.heroActions{align-items:flex-start;display:block}.sampleButton{margin-top:10px;width:100%}.brand{align-items:flex-start}.brand img{width:58px;height:58px;flex-basis:58px}.page{padding:12px}}

@@ -209,6 +209,50 @@ export default function App(){
     actualizarPunto(i, 'humedad', Number(humedad.toFixed(2)));
   };
   const calcularTodasHumedades = () => puntos.forEach((_,i) => calcularHumedadPunto(i));
+  const cargarEjemplo = () => {
+    const moldeEjemplo = { id:'M1', nombre:'Molde 1', peso:4200, volumen:943 };
+    setDatosGenerales({
+      proyecto:'Verificacion GeoCompact',
+      solicitante:'GEOSERVI LAB',
+      ubicacion:'Laboratorio',
+      muestra:'M-01',
+      profundidad:'0.50 m',
+      procedencia:'Banco de prestamo',
+      fecha:'2026-05-04',
+      tecnico:'Ing. Abel Mario Vega Perez',
+      observaciones:'Ejemplo de verificacion Proctor modificado',
+    });
+    setMetodo('Proctor Modificado');
+    setMolde('Molde 4 pulgadas');
+    setModoMoldes('unico');
+    setMoldesEnsayo([moldeEjemplo]);
+    setParam({ ...presets['Proctor Modificado'], volumen_esperado: 943 });
+    setGsSuelo(2.65);
+    setSistemaSuelo('SUCS');
+    setSucs('ML');
+    setAashto('A-4');
+    setTipoSuelo('Limo de baja plasticidad');
+    setPasa200(45);
+    setLl(30);
+    setIp(10);
+    setPreparacionHumedad([
+      { humedad_objetivo: 8, humedad_inicial: 2, masa_suelo_seco: 3000 },
+      { humedad_objetivo: 10, humedad_inicial: 2, masa_suelo_seco: 3000 },
+      { humedad_objetivo: 12, humedad_inicial: 2, masa_suelo_seco: 3000 },
+      { humedad_objetivo: 14, humedad_inicial: 2, masa_suelo_seco: 3000 },
+      { humedad_objetivo: 16, humedad_inicial: 2, masa_suelo_seco: 3000 },
+    ]);
+    setPuntos([
+      { molde_id:'M1', peso_molde_suelo:6040, peso_molde:4200, volumen:943, humedad:8, peso_recipiente:30, peso_recipiente_suelo_humedo:138, peso_recipiente_suelo_seco:130 },
+      { molde_id:'M1', peso_molde_suelo:6180, peso_molde:4200, volumen:943, humedad:10, peso_recipiente:30, peso_recipiente_suelo_humedo:140, peso_recipiente_suelo_seco:130 },
+      { molde_id:'M1', peso_molde_suelo:6320, peso_molde:4200, volumen:943, humedad:12, peso_recipiente:30, peso_recipiente_suelo_humedo:142, peso_recipiente_suelo_seco:130 },
+      { molde_id:'M1', peso_molde_suelo:6280, peso_molde:4200, volumen:943, humedad:14, peso_recipiente:30, peso_recipiente_suelo_humedo:144, peso_recipiente_suelo_seco:130 },
+      { molde_id:'M1', peso_molde_suelo:6220, peso_molde:4200, volumen:943, humedad:16, peso_recipiente:30, peso_recipiente_suelo_humedo:146, peso_recipiente_suelo_seco:130 },
+    ]);
+    setAplicarCorreccion(false);
+    setResultados(null);
+    setError('');
+  };
 
   const calcular = async()=>{
     setError('');
@@ -235,7 +279,7 @@ export default function App(){
   };
 
   return <div className="page">
-    <header className="hero"><div className="brand"><img src={logoGeoCompact} alt="GeoCompact Pro" /><div><h1>GeoCompact Pro v5</h1><p>Reporte profesional de ensayo Proctor estandar y modificado</p></div></div><span className="badge">Laboratorio geotecnico</span></header>
+    <header className="hero"><div className="brand"><img src={logoGeoCompact} alt="GeoCompact Pro" /><div><h1>GeoCompact Pro v5</h1><p>Reporte profesional de ensayo Proctor estandar y modificado</p></div></div><div className="heroActions"><span className="badge">Laboratorio geotecnico</span><button type="button" className="sampleButton" onClick={cargarEjemplo}>Cargar ejemplo</button></div></header>
 
     <section className="card"><h2>1. Datos generales</h2><div className="grid3">{Object.keys(datosGenerales).map(k=><label key={k}>{k.replace('_',' ')}<input value={datosGenerales[k]} onChange={e=>actualizarDato(k,e.target.value)} /></label>)}</div></section>
 
