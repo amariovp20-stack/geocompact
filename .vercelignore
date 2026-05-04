@@ -1,0 +1,7 @@
+backend/
+api/
+requirements.txt
+*.log
+.tmp/
+frontend/node_modules/
+frontend/dist/
